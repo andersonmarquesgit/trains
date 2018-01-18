@@ -2,6 +2,7 @@ package com.trains.metric;
 
 import java.io.PrintStream;
 
+import com.trains.enums.FilterCriteriaEnum;
 import com.trains.route.IRoute;
 
 public class TripsMetric extends AbstractMetric {
@@ -26,11 +27,11 @@ public class TripsMetric extends AbstractMetric {
 		int numberOfTrips = 0;
 
 		try {
-			if (filterCriteria.equalsIgnoreCase("MAX_STOPS")) {
+			if (filterCriteria.equalsIgnoreCase(FilterCriteriaEnum.MAX_STOPS.getValue())) {
 				numberOfTrips = route.numberOfTripsWithMaxStops(startNode, endNode, filterValue);
-			} else if (filterCriteria.equalsIgnoreCase("EXACT_STOPS")) {
+			} else if (filterCriteria.equalsIgnoreCase(FilterCriteriaEnum.EXACT_STOPS.getValue())) {
 				numberOfTrips = route.numberOfTripsWithExactStops(startNode, endNode, filterValue);
-			} else if (filterCriteria.equalsIgnoreCase("MAX_DISTANCE")) {
+			} else if (filterCriteria.equalsIgnoreCase(FilterCriteriaEnum.MAX_DISTANCE.getValue())) {
 				numberOfTrips = route.numberOfTripsWithMaxWeight(startNode, endNode, filterValue);
 			}
 			outputStream.println(numberOfTrips);
