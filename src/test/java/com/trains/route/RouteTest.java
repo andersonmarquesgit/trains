@@ -1,5 +1,7 @@
 package com.trains.route;
 
+import static org.junit.Assert.assertEquals;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,9 +13,7 @@ import com.trains.graph.IGraph;
 import com.trains.route.IRoute;
 import com.trains.route.RouteImpl;
 
-import junit.framework.TestCase;
-
-public class RouteTest extends TestCase {
+public class RouteTest  {
 
 	private final IRoute route = new RouteImpl(this.getDefaultRoutes());
 
