@@ -20,13 +20,13 @@ public abstract class AbstractRouteMetric extends AbstractMetric {
 	protected abstract int callRoute(IRoute route, String start, String end, List<String> intermediate);
 
 	@Override
-	public void execute(IRoute route) {
+	public void execute(IRoute route, String outNumber) {
 		final String routeLine = getConfigMetricLine().substring(10);
         final String[] nodes = routeLine.split("-");
         try {
-            outputStream.println(callRoute(route,nodes[0], nodes[nodes.length - 1], getIntermediateList(nodes)));
+            outputStream.println(outNumber + callRoute(route,nodes[0], nodes[nodes.length - 1], getIntermediateList(nodes)));
         } catch (final NoSuchRouteException e) {
-            outputStream.println(NO_ROUTE_MSG);
+            outputStream.println(outNumber + NO_ROUTE_MSG);
         }
 	}
 

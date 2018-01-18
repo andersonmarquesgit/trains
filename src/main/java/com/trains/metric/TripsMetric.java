@@ -15,7 +15,7 @@ public class TripsMetric extends AbstractMetric {
 	}
 
 	@Override
-	public void execute(IRoute route) {
+	public void execute(IRoute route, String outNumber) {
 		final String routeLine = getConfigMetricLine().substring(7);
 		final String[] commandParts = routeLine.split(",");
 
@@ -34,9 +34,9 @@ public class TripsMetric extends AbstractMetric {
 			} else if (filterCriteria.equalsIgnoreCase(FilterCriteriaEnum.MAX_DISTANCE.getValue())) {
 				numberOfTrips = route.numberOfTripsWithMaxWeight(startNode, endNode, filterValue);
 			}
-			outputStream.println(numberOfTrips);
+			outputStream.println(outNumber + numberOfTrips);
 		} catch (final Exception e) {
-			outputStream.println(AbstractRouteMetric.NO_ROUTE_MSG);
+			outputStream.println(outNumber + AbstractRouteMetric.NO_ROUTE_MSG);
 		}
 
 	}

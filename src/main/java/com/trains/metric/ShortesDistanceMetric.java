@@ -15,14 +15,14 @@ public class ShortesDistanceMetric extends AbstractMetric {
 	}
 
 	@Override
-	public void execute(IRoute route) {
+	public void execute(IRoute route, String outNumber) {
 		final String routeLine = getConfigMetricLine().substring(10);
 		final String from = String.valueOf(routeLine.charAt(0));
 		final String to = String.valueOf(routeLine.charAt(2));
 		try {
-			outputStream.println(route.legthOfTheShortestRoute(from, to));
+			outputStream.println(outNumber + route.legthOfTheShortestRoute(from, to));
 		} catch (final NoSuchRouteException e) {
-			outputStream.println(AbstractRouteMetric.NO_ROUTE_MSG);
+			outputStream.println(outNumber + AbstractRouteMetric.NO_ROUTE_MSG);
 		}
 	}
 

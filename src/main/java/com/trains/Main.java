@@ -24,9 +24,11 @@ public class Main {
 		routesString = scanner.nextLine();
 		
 		GraphBuilder.createGraphicRoutes(route, routesString);
+		int outNumber = 1;
 		
 		for (final IMetric metric : metricConfigList) {
-            metric.execute(route);
+            metric.execute(route, "Output #" + outNumber + ": ");
+            outNumber++;
         }
 
 	}
