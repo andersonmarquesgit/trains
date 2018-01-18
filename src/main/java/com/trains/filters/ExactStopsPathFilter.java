@@ -7,6 +7,7 @@ import com.trains.graph.IPath;
  * @author anderson.marques
  *
  * @param <N>
+ * Nó da rota
  */
 public class ExactStopsPathFilter<N> implements IPathFilter<N> {
 

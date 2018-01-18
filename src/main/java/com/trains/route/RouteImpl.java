@@ -21,11 +21,11 @@ import com.trains.graph.IPath;
  * @author anderson.marques
  *
  */
-public class RouterImpl implements IRoute {
+public class RouteImpl implements IRoute {
 
 	private final IGraph<String> routes;
 
-	public RouterImpl(final IGraph<String> routes) {
+	public RouteImpl(final IGraph<String> routes) {
 		super();
 		this.routes = routes;
 	}

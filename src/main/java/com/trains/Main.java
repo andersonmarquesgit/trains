@@ -8,14 +8,14 @@ import com.trains.graph.GraphBuilder;
 import com.trains.metric.IMetric;
 import com.trains.metric.MetricBuilder;
 import com.trains.route.IRoute;
-import com.trains.route.RouterImpl;
+import com.trains.route.RouteImpl;
 
 public class Main {
 
 	private static Scanner scanner = new Scanner(System.in);
 
 	public static void main(String[] args) throws Exception {
-		final IRoute route = new RouterImpl(GraphBuilder.getEmptyGraph());
+		final IRoute route = new RouteImpl(GraphBuilder.getEmptyGraph());
 		
 		File inputFile = new File(Main.class.getResource("/configMetrics.txt").toURI());
 		final List<IMetric> metricConfigList = new MetricBuilder(System.out).constructMetrics(inputFile);
