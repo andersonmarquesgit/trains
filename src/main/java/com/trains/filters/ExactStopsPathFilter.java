@@ -2,6 +2,12 @@ package com.trains.filters;
 
 import com.trains.graph.IPath;
 
+/**
+ * Filtro de verificação de paradas exatas.
+ * @author anderson.marques
+ *
+ * @param <N>
+ */
 public class ExactStopsPathFilter<N> implements IPathFilter<N> {
 
 	private final int stopsNumber;

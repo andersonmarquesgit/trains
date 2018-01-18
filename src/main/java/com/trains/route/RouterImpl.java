@@ -15,6 +15,12 @@ import com.trains.graph.GraphPath;
 import com.trains.graph.IGraph;
 import com.trains.graph.IPath;
 
+
+/**
+ * Implementação de {@link IRoute}
+ * @author anderson.marques
+ *
+ */
 public class RouterImpl implements IRoute {
 
 	private final IGraph<String> routes;

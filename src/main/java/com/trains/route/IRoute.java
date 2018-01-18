@@ -4,6 +4,12 @@ import java.util.List;
 
 import com.trains.graph.IGraph;
 
+
+/**
+ * Interface responsável pelo cálculo de cada métrica de rotas.
+ * @author anderson.marques
+ *
+ */
 public interface IRoute {
 	
 	int routeDistance(String fromCity, String endCity, List<String> intermediateCities);

@@ -5,6 +5,11 @@ import java.io.PrintStream;
 import com.trains.enums.FilterCriteriaEnum;
 import com.trains.route.IRoute;
 
+/**
+ * Implementação da métrica de número de viagens
+ * @author anderson.marques
+ *
+ */
 public class TripsMetric extends AbstractMetric {
 
 	private final PrintStream outputStream;

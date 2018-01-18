@@ -2,6 +2,13 @@ package com.trains.filters;
 
 import com.trains.graph.IPath;
 
+/**
+ * Filtro de verificação do máximo de paradas.
+ * @author anderson.marques
+ *
+ * @param <N>
+ * Nó da rota
+ */
 public class MaxStopsPathFilter<N> implements IPathFilter<N> {
 
 	private final int maxStops;

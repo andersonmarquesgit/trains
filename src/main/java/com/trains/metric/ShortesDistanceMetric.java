@@ -5,6 +5,11 @@ import java.io.PrintStream;
 import com.trains.exception.NoSuchRouteException;
 import com.trains.route.IRoute;
 
+/**
+ * Implementação da métrica que calcula a rota mais curta.
+ * @author anderson.marques
+ *
+ */
 public class ShortesDistanceMetric extends AbstractMetric {
 
 	private final PrintStream outputStream;

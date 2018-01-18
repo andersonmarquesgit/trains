@@ -5,6 +5,11 @@ import java.util.List;
 
 import com.trains.route.IRoute;
 
+/**
+ * Implementação da métrica de distância
+ * @author anderson.marques
+ *
+ */
 public class DistanceMetric extends AbstractRouteMetric {
 
 	public DistanceMetric(String configMetricLine, PrintStream outputStream) {

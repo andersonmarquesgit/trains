@@ -2,6 +2,13 @@ package com.trains.filters;
 
 import com.trains.graph.IPath;
 
+/**
+ * Filtro de verificação do total da rota
+ * @author anderson.marques
+ *
+ * @param <N>
+ * Nó da rota
+ */
 public class WeightPathFilter<N> implements IPathFilter<N> {
 
 	private final int maxWeight;

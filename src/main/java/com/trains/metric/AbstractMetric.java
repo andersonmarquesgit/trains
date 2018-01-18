@@ -1,5 +1,10 @@
 package com.trains.metric;
 
+/**
+ * Implementação de {@link IMetric}. Ela abstrai as configurações de cada métrica.
+ * @author anderson.marques
+ *
+ */
 public abstract class AbstractMetric implements IMetric {
 
 	private final String configMetricLine;

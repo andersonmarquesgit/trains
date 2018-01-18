@@ -1,5 +1,10 @@
 package com.trains.exception;
 
+/**
+ * Implementação da exceção de ausência de rota
+ * @author anderson.marques
+ *
+ */
 public class NoSuchRouteException extends RuntimeException {
 
 	private static final long serialVersionUID = -3002885204210474431L;

@@ -8,6 +8,13 @@ import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Está classe é responsável por criar as métricas. Foi adotado um arquivo de configuração de cada métrica
+ * afim de instanciar a sua respectiva classe. Caso seja necessário evoluir essa configuração para ser carregada de outra
+ * fonte basta alterar o método constructMetrics().
+ * @author anderson.marques
+ *
+ */
 public class MetricBuilder {
 
 	private static final String DISTANCE_REGEX = "DISTANCE:\\s\\D-\\D(-\\D)*";
@@ -22,16 +29,16 @@ public class MetricBuilder {
     }
     
     public List<IMetric> constructMetrics(File inputFile) throws IOException {
-		final List<IMetric> commands = new ArrayList<IMetric>();
+		final List<IMetric> metrics = new ArrayList<IMetric>();
         final BufferedReader reader = new BufferedReader(new FileReader(inputFile));
         while (reader.ready()) {
             final IMetric toAdd = processLine(reader);
             if (toAdd != null) {
-                commands.add(toAdd);
+            	metrics.add(toAdd);
             }
         }
         reader.close();
-        return commands;
+        return metrics;
 	}
     
     private IMetric processLine(final BufferedReader reader) throws IOException {
